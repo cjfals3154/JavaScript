@@ -6,6 +6,14 @@
 </head>
 <body>
   <h1><a href="index.html">WEB</a></h1>
+  <ol>
+    <li><a href="1.html">HTML</a></li>
+    <li><a href="2.html">CSS</a></li>
+    <li><a href="3.html">JavaScript</a></li>
+  </ol>
+
+  var alist=document.querySelectorAll('a');
+  console.log(alist.length);
 
 <input id="night_on" type="button" value="night" onclick="
 var target = document.querySelector('body')
@@ -13,6 +21,9 @@ if(this.value === 'night'){
   target.style.backgroundColor='black';
   target.style.color='white';
   this.value = 'day'
+
+
+
 } else{
   target.style.backgroundColor='white';
   target.style.color='black';
