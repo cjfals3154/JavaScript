@@ -4,8 +4,40 @@
   <title>철민이의 HTML</title>
   <meta charset="utf-8">
 <link rel="stylesheet" href="style.css">
+<script>
+function daynighthandler(me){
+var target = document.querySelector('body')
+if(me.value === 'night'){
+  target.style.backgroundColor='black';
+  target.style.color='white';
+  me.value = 'day'
+
+  var alist = document.querySelectorAll('a');
+  var i = 0;
+  while(i < alist.length){
+  alist[i].style.color = 'powderblue';
+  i = i + 1;
+  }
+} else{
+  target.style.backgroundColor='white';
+  target.style.color='black';
+  me.value = 'night'
+
+  var alist = document.querySelectorAll('a');
+  var i = 0;
+  while(i < alist.length){
+  alist[i].style.color = 'blue';
+  i = i + 1;
+  }
+}
+}
+</script>
+
 </head>
 <body style="margin-left:0">
+  <input id="night_on" type="button" value="night" onclick="
+daynighthandler(this);
+  ">
   <h1><a href="index.html">WEB</a></h1>
   <div id="grid">
   <ol>
