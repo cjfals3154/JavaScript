@@ -7,14 +7,33 @@
   <body>
 <ul>
 <script>
-  var sohan = {
-    "programmer":"shincheasdfsadfqwjriowqejriowqejfisdjfwqolmin",
-    "designer":"jinhfdgasfgwqerqerwqerwqerqewrwqerweo"
+  var coworkers = {
+    "programmer":" egoing",
+    "designer":" leezche"
 };
 
-document.write("programmer :" + sohan.programmer+"<br>");
-document.write("designer :" + sohan.designer);
+document.write("programmer :" + coworkers.programmer+"<br>");
+document.write("designer :" + coworkers.designer+"<br>");
+coworkers.bookkeeper = "duru";
+document.write("bookkerper : "+coworkers.bookkeeper+"<br>");
+coworkers["data scientist"] = "taeho";
+document.write("data scientist : "+coworkers["data scientist"]+"<br>");
 
+</script>
+<h1>key찾기</h1>
+<script>
+for(var key in coworkers){
+  document.write(key+':'+coworkers[key]+'<br>')
+}
+</script>
+<h2>Property & method</h2>
+<script>
+coworkers. showAll = function(){
+  for(var key in coworkers){
+    document.write(key+':'+coworkers[key]+'<br>')
+  }
+}
+coworkers.showAll();
 </script>
   </body>
 </html>

@@ -4,8 +4,47 @@
   <title>철민이의 JavaScript</title>
   <meta charset="utf-8">
   <link rel="stylesheet" href="style.css">
+  <script>
+  var Links ={
+    setColor:function(color){
+      var alist = document.querySelectorAll('a');
+      var i = 0;
+      while(i < alist.length){
+      alist[i].style.color = color;
+      i = i + 1;
+      }
+    }
+  }
+var Body = {
+setColor:function (color){
+      document.querySelector('body').style.color = color;
+    },
+  setBackgroundColor:function(color){
+      document.querySelector('body').style.backgroundColor = color;
+  }
+}
+
+  function daynighthandler(me){
+    var target = document.querySelector('body');
+    if(me.value === 'night'){
+    Body.setBackgroundColor('black');
+    Body.setColor('white');
+    me.value = 'day';
+
+    Links.setColor('powderblue');
+  } else {
+    Body.setBackgroundColor('white');
+    Body.setColor('black');
+    me.value = 'night';
+    Links.setColor('blue');
+  }
+}
+  </script>
 </head>
 <body style="margin-left:0px">
+  <input id="night_on" type="button" value="night" onclick="
+  daynighthandler(this);
+  ">
   <h1><a href="index.html">WEB</a></h1>
   <div id=grid>
   <ol>

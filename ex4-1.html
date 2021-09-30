@@ -3,41 +3,7 @@
 <head>
   <title>철민이의 JavaScript</title>
   <meta charset="utf-8">
-  <script>
-  function LinkScolor(color){
-    var alist = document.querySelectorAll('a');
-    var i = 0;
-    while(i < alist.length){
-    alist[i].style.color = color;
-    i = i + 1;
-    }
-  }
-
-  function BodysetColor(color){
-    document.querySelector('body').style.color = color;
-  }
-
-function BodysetbackgroundColor(color){
-    document.querySelector('body').style.backgroundColor = color;
-}
-
-  function daynighthandler(me){
-  var target = document.querySelector('body')
-  if(me.value === 'night'){
-    Body.setbackgroundColor('black');
-    Body.setColor('white');
-    me.value = 'day';
-    Link.scolor('powderblue');
-
-  } else{
-    Body.setbackgroundColor('white');
-    Body.setColor('black');
-    me.value = 'night';
-    Link.scolor('blue');
-
-  }
-  }
-  </script>
+  <script src:"colors.js"></script>
 </head>
 <body>
   <h1><a href="index.html">WEB</a></h1>
