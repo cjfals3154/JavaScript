@@ -1,14 +1,11 @@
-// function diveide(a, b){
-//     console.log(a / b);
-// }
+const age = parseInt (prompt("How old are you?")); 
 
-// diveide(60, 8);
-
-const player = {
-    name: "nico",
-    sayHello: function( a ){
-        console.log("hello" + a);
-    },
-};
-
-player.sayHello("shin")
+if(isNaN(age)){
+    console.log("Please write a number");
+} else if(age < 18) {
+    console.log("you are too young.");
+} else if(age >= 18 && age <= 50) {
+    console.log("you can drink");
+} else{
+    console.log("you can't drink")
+}
